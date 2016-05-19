@@ -208,22 +208,6 @@ class LegalEntityController {
         });     
     }
     
-    deleteOtherName(otherName, $event){
-        let confirm = this.$mdDialog.confirm()
-                                .title('Are you sure?')
-                                .content('Are you sure you want to delete this Other Name?')
-                                .ok('Yes')
-                                .cancel('No')
-                                .targetEvent($event);
-        
-        this.$mdDialog.show(confirm).then(() => {
-            // delete the specific other name 
-            _.pull(this.selected.OTHER_NAME, otherName );
-            // update the legal entity            
-            this.legalEntityService.updateLegalEntity(this.selected);
-        });     
-    }
-    
     addIdentifier(){
         let IdType = new ValueStruct("DUNS-number", "DUNS-number"); 
         let identifier = new LegalEntityIdentifier(IdType, "")
