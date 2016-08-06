@@ -48,3 +48,4 @@ Execute `gulp` in order to build the electron app.
 
 The final electron app will be located as a zip file within the `dist` subfolder. Extract the ZIP file and start the electron app.
 
+just add something 
